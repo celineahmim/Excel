@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -9,17 +9,16 @@
 <body>
 
     <div class="sidebar">
-        <img src="/static/logo.png" alt="Logo ÉMÉRITE">
+        <img id="logo" src="/static/logo.png" alt="Logo ÉMÉRITE">
         <p>Fusionner</p>
     </div>
 
     <div class="container">
         <h2>Fusionner des fichiers Excel</h2>
 
-        <!-- Section de téléchargement des fichiers avec un seul champ de mots-clés -->
         <div class="upload-section">
             <label>Insérez vos mots-clés (séparés par des virgules) :</label>
-            <input type="text" id="mots-cles" placeholder="mot1, mot2, mot3...">
+            <textarea id="mots-cles" placeholder="mot1, mot2, mot3..." rows="3"></textarea>
         </div>
 
         <div class="file-section">
@@ -29,11 +28,12 @@
 
         <button onclick="uploadFiles()">Lancer la fusion</button>
 
-        <div id="progress">En cours de traitement...</div>
+        <div id="progress">
+            <div></div>
+        </div>
 
-        <a id="download-link" style="display: none;">
-            <img src="/static/excel-icon.png" alt="Excel">
-            Télécharger le fichier fusionné
+        <a id="download-link" href="#" style="display: none;">
+            📥 Télécharger le fichier fusionné
         </a>
     </div>
 
