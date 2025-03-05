@@ -7,7 +7,7 @@ function uploadFiles() {
         return;
     }
 
-    document.getElementById("progress").style.display = "block";
+    document.getElementById("progress").style.display = "block";  // Afficher la barre de progrès
 
     let formData = new FormData();
     for (let i = 0; i < files.length; i++) {
@@ -21,13 +21,17 @@ function uploadFiles() {
     })
     .then(response => response.json())
     .then(data => {
-        document.getElementById("progress").style.display = "none";
+        document.getElementById("progress").style.display = "none";  // Cacher la barre de progrès
         if (data.download_url) {
             let link = document.getElementById("download-link");
             link.href = data.download_url;
             link.style.display = "block";
         } else {
-            alert("Erreur : " + data.error);
+            alert("Erreur: " + data.error);
         }
+    })
+    .catch(error => {
+        document.getElementById("progress").style.display = "none";  // Cacher la barre de progrès
+        alert("Erreur de communication avec le serveur.");
     });
 }
