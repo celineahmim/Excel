@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fusion des fichiers Excel</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <div class="sidebar">
+        <img src="/static/logo.png" alt="Logo ÉMÉRITE">
+        <p>Fusionner</p>
+    </div>
+
+    <div class="container">
+        <h2>Fusionner des fichiers Excel</h2>
+
+        <div class="upload-section">
+            <label>Insérez vos mots-clés :</label>
+            <input type="text" id="mots-cles" placeholder="Entrez vos mots-clés, un par ligne. Laissez une ligne vide entre chaque mot-clé.">
+        </div>
+
+        <div class="file-section">
+            <label>Insérez vos fichiers Excel :</label>
+            <input type="file" id="file-input" multiple accept=".xlsx">
+        </div>
+
+        <button onclick="uploadFiles()">Lancer la fusion</button>
+
+        <div id="progress">En cours de traitement...</div>
+
+        <a id="download-link" style="display: none;">
+            <img src="/static/excel-icon.png" alt="Excel">
+            Télécharger le fichier fusionné
+        </a>
+    </div>
+
+    <script src="/static/script.js"></script>
+
+</body>
+</html>
