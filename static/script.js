@@ -7,20 +7,27 @@ function uploadFiles() {
         return;
     }
 
-    // Ajouter des numéros devant chaque mot-clé
-    let motsClesListe = motsCles.split('\n').filter(Boolean);  // Divise par ligne et enlève les vides
-    let motsClesNumerotes = motsClesListe.map((mot, index) => `${index + 1}. ${mot}`).join('\n');
-
-    // Mettre à jour la valeur de l'input pour refléter les changements
-    document.getElementById("mots-cles").value = motsClesNumerotes;
+    if (files.length > 50 || motsCles.split(",").length > 50) {
+        alert("Vous ne pouvez pas télécharger plus de 50 fichiers et mots-clés.");
+        return;
+    }
 
     document.getElementById("progress").style.display = "block";
 
     let formData = new FormData();
+    let motsClesArray = motsCles.split(",").map(mot => mot.trim()); // Séparer les mots-clés
+
+    if (files.length !== motsClesArray.length) {
+        alert("Le nombre de mots-clés ne correspond pas au nombre de fichiers.");
+        document.getElementById("progress").style.display = "none";
+        return;
+    }
+
+    // Ajouter les fichiers et les mots-clés au formData
     for (let i = 0; i < files.length; i++) {
         formData.append("fichiers", files[i]);
+        formData.append("mots_cles", motsClesArray[i]);
     }
-    formData.append("mots_cles", motsClesNumerotes);
 
     fetch("/upload", { 
         method: "POST",
