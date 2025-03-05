@@ -1,85 +1,79 @@
-/* Style global du body */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-    color: #333;
-    margin: 0;
-    padding: 0;
 }
 
-/* Sidebar */
 .sidebar {
-    width: 200px;
+    width: 180px;
     background-color: #2b2e3b;
     color: white;
-    padding: 20px;
+    padding: 15px;
     position: fixed;
     height: 100%;
 }
 
-/* Conteneur principal de la page */
 .container {
-    margin-left: 220px;
-    padding: 20px;
-}
-
-/* Titre */
-h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-/* Sections de téléchargement */
-.upload-section, .file-section {
-    margin-bottom: 20px;
-}
-
-/* Champs de saisie */
-input[type="text"], input[type="file"] {
-    padding: 15px;
-    margin-top: 10px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    width: 100%;
-    font-size: 1rem;
-}
-
-input[type="text"] {
-    height: 50px;
+    margin-left: 200px;
+    padding: 30px;
+    width: 75%;
 }
 
 button {
     background-color: #007bff;
     color: white;
-    padding: 15px 30px;
+    padding: 10px 20px;
     border: none;
     cursor: pointer;
-    border-radius: 8px;
-    font-size: 1.1rem;
-    transition: background-color 0.3s;
+    border-radius: 5px;
+    margin-top: 20px;
 }
 
-button:hover {
-    background-color: #0056b3;
-}
-
-/* Progress bar */
 #progress {
     display: none;
     margin-top: 20px;
-    font-size: 1.2rem;
-    color: #007bff;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 5px;
+    width: 50%;
+    margin: 20px 0;
 }
 
-/* Lien de téléchargement */
+#progress div {
+    height: 100%;
+    width: 0;
+    background-color: #4caf50;
+    border-radius: 5px;
+}
+
+#file-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#file-input::file-selector-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+#file-input::file-selector-button:hover {
+    background-color: #0056b3;
+}
+
 a {
-    display: block;
-    margin-top: 20px;
-    text-decoration: none;
-    font-size: 1.2rem;
+    display: none;
     color: #007bff;
+    text-decoration: none;
 }
 
 a:hover {
-    color: #0056b3;
+    text-decoration: underline;
+}
+
+#logo {
+    max-width: 120px;
+    margin-bottom: 20px;
 }
