@@ -1,11 +1,13 @@
+/* Style global du body */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
+    color: #333;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
+/* Sidebar */
 .sidebar {
     width: 200px;
     background-color: #2b2e3b;
@@ -13,81 +15,71 @@ body {
     padding: 20px;
     position: fixed;
     height: 100%;
-    top: 0;
-    left: 0;
 }
 
+/* Conteneur principal de la page */
 .container {
     margin-left: 220px;
-    padding: 30px;
-    padding-top: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding: 20px;
 }
 
+/* Titre */
 h2 {
-    font-size: 24px;
+    font-size: 2rem;
     margin-bottom: 20px;
-    text-align: center;
-    color: #333;
 }
 
+/* Sections de téléchargement */
 .upload-section, .file-section {
     margin-bottom: 20px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
 }
 
-label {
-    font-size: 14px;
-    margin-bottom: 5px;
-    color: #333;
-}
-
+/* Champs de saisie */
 input[type="text"], input[type="file"] {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ddd;
+    padding: 15px;
+    margin-top: 10px;
     border-radius: 8px;
-    background-color: #fff;
-    font-size: 16px;
+    border: 1px solid #ccc;
+    width: 100%;
+    font-size: 1rem;
+}
+
+input[type="text"] {
+    height: 50px;
 }
 
 button {
     background-color: #007bff;
     color: white;
-    padding: 12px 30px;
+    padding: 15px 30px;
     border: none;
     cursor: pointer;
     border-radius: 8px;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
+    font-size: 1.1rem;
+    transition: background-color 0.3s;
 }
 
 button:hover {
     background-color: #0056b3;
 }
 
+/* Progress bar */
 #progress {
     display: none;
     margin-top: 20px;
-    font-size: 16px;
-    color: #333;
-}
-
-#download-link {
-    display: none;
-    margin-top: 30px;
+    font-size: 1.2rem;
     color: #007bff;
-    font-size: 16px;
-    text-decoration: underline;
-    cursor: pointer;
 }
 
-#download-link:hover {
+/* Lien de téléchargement */
+a {
+    display: block;
+    margin-top: 20px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #007bff;
+}
+
+a:hover {
     color: #0056b3;
 }
