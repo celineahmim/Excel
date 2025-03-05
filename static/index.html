@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fusion des fichiers Excel</title>
+    <title>Fusionner des fichiers Excel</title>
     <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
 
     <div class="sidebar">
-        <img id="logo" src="/static/logo.png" alt="Logo ÉMÉRITE">
+        <img src="/static/logo.png" alt="Logo ÉMÉRITE">
         <p>Fusionner</p>
     </div>
 
@@ -17,8 +17,8 @@
         <h2>Fusionner des fichiers Excel</h2>
 
         <div class="upload-section">
-            <label>Insérez vos mots-clés (séparés par des virgules) :</label>
-            <textarea id="mots-cles" placeholder="mot1, mot2, mot3..." rows="3"></textarea>
+            <label>Insérez vos mots-clés :</label>
+            <textarea id="mots-cles" placeholder="Entrez les mots-clés ici, un par ligne"></textarea>
         </div>
 
         <div class="file-section">
@@ -28,12 +28,11 @@
 
         <button onclick="uploadFiles()">Lancer la fusion</button>
 
-        <div id="progress">
-            <div></div>
-        </div>
+        <div id="progress">En cours de traitement...</div>
 
-        <a id="download-link" href="#" style="display: none;">
-            📥 Télécharger le fichier fusionné
+        <a id="download-link" style="display: none;">
+            <img src="/static/excel-icon.png" alt="Excel">
+            Télécharger le fichier fusionné
         </a>
     </div>
 
